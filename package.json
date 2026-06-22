@@ -1,4 +1,10 @@
 {
+  "name": "node-messagebox",
+  "version": "1.0.0",
+  "main": "anonymous.js",
+  "scripts": {
+    "start": "node anonymous.js"
+  },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "ejs": "^6.0.1",
