@@ -23,7 +23,7 @@ app.listen(port, () => {
 });
 
 //connecting to mongoose
-mongoose.connect('mongodb+srv://mayankkumar14206_db_user:5678@cluster0.gae2o4g.mongodb.net/?appName=Cluster0', { }).then(() =>{
+mongoose.connect('mongodb+srv://mayankkumar14206_db_user:5678@cluster0.gae2o4g.mongodb.net/?appName=Cluster0&tlsAllowInvalidCertificates=true', { }).then(() =>{
     console.log('Connected to MongoDB');
 });
 
