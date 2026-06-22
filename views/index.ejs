@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Recent Confessions</h3>
+<div id="messages-container">
+    <% if (typeof messages !== 'undefined' && messages.length > 0) { %>
+        <% messages.forEach(msg => { %>
+            <div style="background: #f4f4f4; padding: 15px; margin-bottom: 10px; border-radius: 5px; max-width: 500px;">
+                <p style="margin: 0 0 8px 0; font-size: 16px;"><%= msg.message %></p> 
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p style="color: #888;">No messages posted yet. Be the first!</p>
+    <% } %>
+</div>
+    <form action="/submit" method="post">
+        <!-- Add your form fields here -->
+        <textarea name="message" placeholder="Enter your message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
